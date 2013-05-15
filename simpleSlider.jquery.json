@@ -1,0 +1,32 @@
+{
+  "name": "simpleSlider",
+  "title": "jQuery Simple Slider",
+  "description": "A simple, lightweight and responsive jQuery slider plugin with many options",
+  "keywords": [
+    "jquery",
+    "slider",
+    "plugins"
+  ],
+  "version": "1.0",
+  "author": {
+    "name": "Etienne Fardet",
+    "url": "https://github.com/efardet"
+  },
+  "maintainers": [
+    {
+      "name": "Etienne Fardet",
+      "url": "https://github.com/efardet"
+    }
+  ],
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "http://www.opensource.org/licenses/mit-license.php"
+    }
+  ],
+  "homepage": "http://www.quai-aux-vivres.com/jquery/plugins/simpleSlider/",
+  "download": "http://quai-aux-vivres.com/jquery/plugins/simpleSlider/jquery.simpleSlider.1.0.zip",
+  "dependencies": {
+    "jquery": ">=1.4"
+  }
+}
