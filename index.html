@@ -1,0 +1,407 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<title>Simple jQuery Slider by Etienne Fardet</title>
+<link href="style.css" type="text/css" rel="stylesheet" />
+</head> 
+<body>
+    <h1>jQuery Simple Slider</h1>
+
+			<div class="demo">	
+			<p>jQuery Simple Slider is a <strong>simple</strong>, <strong>lightweight</strong> and &quot;expandable&quot; jQuery plugin with several options.<br />
+			    In order to work, it may be applied to a 'wrapper' div containing the elements to slide. </p>
+				<p><strong>Example of simple integration</strong> : jQuery(&quot;.slider1&quot;).simpleSlider<br />
+			    <strong>Note:</strong> You can use ID or class.</p>
+				<p>The plugin has options to set/unset navigation elements, and defining columns and slide speed :</p>
+				<p> <strong>navigation</strong>: display/hide Prev/Next buttons. Set to <strong>true</strong> or <strong>false</strong><br />
+				  <strong>prevText</strong>: Set text for previous nav button. Use with quotes (&quot;&quot;)<br />
+	              <strong>nextText</strong>: Same as above, for next nav button<br />
+                  <strong>pagination</strong>: Used to display/hide numbered navigation. Set to <strong>true</strong> or <strong>false</strong><br />
+                  <strong>autoplay</strong>: Auto slide items. Set to <strong>true</strong> or <strong>false</strong><br />
+	              <strong>delay</strong>: Time in milliseconds between transitions<br />
+	              <strong>speed</strong>: Slide speed in milliseconds <br />
+<strong>numItems</strong>: Display items in columns. Default : 1</p>
+				<p>I have added the touchwipe support for mobile devices, this is optional of course for the plugin to work.</p>
+				<p><strong>Download the demo with plugin <a href="jquery.simpleSlider.1.0.zip">here</a>.</strong></p>
+				<div class="clearfloat"></div>
+				<h2>Examples</h2>
+				<h3>Responsive, with all options enabled!</h3>
+				<div class="carousel responsive">
+					<div class="carousel-container">
+						<div class="carousel-wrapper slider6">
+							<div class="carousel-element">
+								<p><span class="t1">News 1</span> <span class="t2">It's great!</span></p>
+							</div>
+							<div class="carousel-element">
+								<p><span class="t1">News 2</span> <span class="t2">It's great!</span></p>
+								</p>
+							</div>
+							<div class="carousel-element">
+								<p><span class="t1">News 3</span> <span class="t2">It's great!</span></p>
+							</div>
+							<div class="carousel-element">
+								<p><span class="t1">News 4</span> <span class="t2">It's great!</span></p>
+							</div>
+							<div class="carousel-element">
+								<p><span class="t1">News 5</span> <span class="t2">It's great!</span></p>
+							</div>
+							<div class="carousel-element">
+								<p><span class="t1">News 6</span> <span class="t2">It's great!</span></p>
+							</div>
+							<div class="carousel-element">
+								<p><span class="t1">News 7</span> <span class="t2">It's great!</span></p>
+							</div>
+						</div> <!-- Fin Wrapper -->
+						
+						<div class="infos">
+							<p>Wanna know more?</p>
+							<p>Contact us!</p>
+							<p><a title="Send email" href="#">Send email</a></p>
+						</div>
+					</div> <!-- End Container -->
+				</div> <!-- End Carousel -->
+				<h4>Code</h4>
+				<pre>
+jQuery(".slider6").simpleSlider({
+	navigation: true,
+	prevText: "Previous",
+	nextText: "Next",
+	pagination: true,
+	autoplay: true,
+	delay: 8000,
+	speed: 500,
+	numItems: 3
+});
+
+<strong>
+// To make this work, set the top-level container 
+// width in percentage, and the magic will appear!
+</strong>
+				</pre>
+				<h3>1-column</h3>
+				<div class="carousel">
+					<div class="carousel-container">
+						<div class="carousel-wrapper slider1">
+							<div class="carousel-element">
+								<p><span class="t1">News 1</span> <span class="t2">Guess what...</span> <span class="t2">It's great!</span><span class="t3">easy to <span>integrate</span></span></p>
+							</div>
+							<div class="carousel-element">
+								<p><span class="t1">News 2</span> <span class="t2">Guess what...</span> <span class="t2">It's great!</span><span class="t3">works with <span>anything</span></span>
+								</p>
+							</div>
+							<div class="carousel-element">
+								<p><span class="t1">News 3</span> <span class="t2">Guess what...</span> <span class="t2">It's great!</span><span class="t3">Nav, speed, columns</span></p>
+							</div>
+							<div class="carousel-element">
+								<p><span class="t1">News 4</span> <span class="t2">Guess what...</span> <span class="t2">It's great!</span><span class="t3">Responsive, mobile, %tages.</span></p>
+							</div>
+						</div> <!-- End Wrapper -->
+						
+						<div class="infos">
+							<p>Wanna know more?</p>
+							<p>Contact us!</p>
+							<p><a title="Send email" href="#">Send email</a></p>
+						</div>
+					</div> <!-- End Container -->
+				</div> <!-- End Carousel -->
+				<h4>Code</h4>
+				<pre>
+jQuery(".slider1").simpleSlider({
+	navigation: true,
+	prevText: "Previous",
+	nextText: "Next",
+	pagination: false,
+	autoplay: false,
+	delay: 8000,
+	speed: 500,
+	numItems: 1
+});
+				</pre>
+				<h3>Multiple columns</h3>
+				<div class="carousel">
+					<div class="carousel-container">
+						<div class="carousel-wrapper slider2">
+							<div class="carousel-element">
+								<p><span class="t1">News 1</span> <span class="t2">It's great!</span></p>
+							</div>
+							<div class="carousel-element">
+								<p><span class="t1">News 2</span> <span class="t2">It's great!</span></p>
+								</p>
+							</div>
+							<div class="carousel-element">
+								<p><span class="t1">News 3</span> <span class="t2">It's great!</span></p>
+							</div>
+							<div class="carousel-element">
+								<p><span class="t1">News 4</span> <span class="t2">It's great!</span></p>
+							</div>
+							<div class="carousel-element">
+								<p><span class="t1">News 5</span> <span class="t2">It's great!</span></p>
+							</div>
+							<div class="carousel-element">
+								<p><span class="t1">News 6</span> <span class="t2">It's great!</span></p>
+							</div>
+							<div class="carousel-element">
+								<p><span class="t1">News 7</span> <span class="t2">It's great!</span></p>
+							</div>
+						</div> <!-- Fin Wrapper -->
+						
+						<div class="infos">
+							<p>Wanna know more?</p>
+							<p>Contact us!</p>
+							<p><a title="Send email" href="#">Send email</a></p>
+						</div>
+					</div> <!-- End Container -->
+				</div> <!-- End Carousel -->
+				<h4>Code</h4>
+				<pre>
+jQuery(".slider2").simpleSlider({
+	navigation: true,
+	prevText: "Previous",
+	nextText: "Next",
+	pagination: false,
+	autoplay: false,
+	delay: 8000,
+	speed: 500,
+	numItems: 3
+});
+				</pre>
+				<h3>Prev/Next Navigation</h3>
+				<div class="carousel">
+					<div class="carousel-container">
+						<div class="carousel-wrapper slider3">
+							<div class="carousel-element">
+								<p><span class="t1">News 1</span> <span class="t2">It's great!</span></p>
+							</div>
+							<div class="carousel-element">
+								<p><span class="t1">News 2</span> <span class="t2">It's great!</span></p>
+								</p>
+							</div>
+							<div class="carousel-element">
+								<p><span class="t1">News 3</span> <span class="t2">It's great!</span></p>
+							</div>
+							<div class="carousel-element">
+								<p><span class="t1">News 4</span> <span class="t2">It's great!</span></p>
+							</div>
+							<div class="carousel-element">
+								<p><span class="t1">News 5</span> <span class="t2">It's great!</span></p>
+							</div>
+							<div class="carousel-element">
+								<p><span class="t1">News 6</span> <span class="t2">It's great!</span></p>
+							</div>
+							<div class="carousel-element">
+								<p><span class="t1">News 7</span> <span class="t2">It's great!</span></p>
+							</div>
+						</div> <!-- Fin Wrapper -->
+						
+						<div class="infos">
+							<p>Wanna know more?</p>
+							<p>Contact us!</p>
+							<p><a title="Send email" href="#">Send email</a></p>
+						</div>
+					</div> <!-- End Container -->
+				</div> <!-- End Carousel -->
+				<h4>Code</h4>
+				<pre>
+jQuery(".slider3").simpleSlider({
+	navigation: true,
+	prevText: "Previous",
+	nextText: "Next",
+	pagination: false,
+	autoplay: false,
+	delay: 8000,
+	speed: 500,
+	numItems: 1
+});
+				</pre>
+				<h3>Numbered Navigation</h3>
+				<div class="carousel">
+					<div class="carousel-container">
+						<div class="carousel-wrapper slider4">
+							<div class="carousel-element">
+								<p><span class="t1">News 1</span> <span class="t2">It's great!</span></p>
+							</div>
+							<div class="carousel-element">
+								<p><span class="t1">News 2</span> <span class="t2">It's great!</span></p>
+								</p>
+							</div>
+							<div class="carousel-element">
+								<p><span class="t1">News 3</span> <span class="t2">It's great!</span></p>
+							</div>
+							<div class="carousel-element">
+								<p><span class="t1">News 4</span> <span class="t2">It's great!</span></p>
+							</div>
+							<div class="carousel-element">
+								<p><span class="t1">News 5</span> <span class="t2">It's great!</span></p>
+							</div>
+							<div class="carousel-element">
+								<p><span class="t1">News 6</span> <span class="t2">It's great!</span></p>
+							</div>
+							<div class="carousel-element">
+								<p><span class="t1">News 7</span> <span class="t2">It's great!</span></p>
+							</div>
+						</div> <!-- Fin Wrapper -->
+						
+						<div class="infos">
+							<p>Wanna know more?</p>
+							<p>Contact us!</p>
+							<p><a title="Send email" href="#">Send email</a></p>
+						</div>
+					</div> <!-- End Container -->
+				</div> <!-- End Carousel -->
+				<h4>Code</h4>
+				<pre>
+jQuery(".slider4").simpleSlider({
+	navigation: false,
+	prevText: "Previous",
+	nextText: "Next",
+	pagination: true,
+	autoplay: false,
+	delay: 8000,
+	speed: 500,
+	numItems: 1
+});
+				</pre>
+				<h3>Autoplay</h3>
+				<div class="carousel">
+					<div class="carousel-container">
+						<div class="carousel-wrapper slider5">
+							<div class="carousel-element">
+								<p><span class="t1">News 1</span> <span class="t2">It's great!</span></p>
+							</div>
+							<div class="carousel-element">
+								<p><span class="t1">News 2</span> <span class="t2">It's great!</span></p>
+								</p>
+							</div>
+							<div class="carousel-element">
+								<p><span class="t1">News 3</span> <span class="t2">It's great!</span></p>
+							</div>
+							<div class="carousel-element">
+								<p><span class="t1">News 4</span> <span class="t2">It's great!</span></p>
+							</div>
+							<div class="carousel-element">
+								<p><span class="t1">News 5</span> <span class="t2">It's great!</span></p>
+							</div>
+							<div class="carousel-element">
+								<p><span class="t1">News 6</span> <span class="t2">It's great!</span></p>
+							</div>
+							<div class="carousel-element">
+								<p><span class="t1">News 7</span> <span class="t2">It's great!</span></p>
+							</div>
+						</div> <!-- Fin Wrapper -->
+						
+						<div class="infos">
+							<p>Wanna know more?</p>
+							<p>Contact us!</p>
+							<p><a title="Send email" href="#">Send email</a></p>
+						</div>
+					</div> <!-- End Container -->
+				</div> <!-- End Carousel -->
+				<h4>Code</h4>
+				<pre>
+jQuery(".slider5").simpleSlider({
+	navigation: false,
+	prevText: "Previous",
+	nextText: "Next",
+	pagination: false,
+	autoplay: true,
+	delay: 8000,
+	speed: 500,
+	numItems: 1
+});
+				</pre>
+
+                <p></p>
+                <p></p>
+                <p>Have fun !</p>
+                <p><strong>Etienne Fardet</strong></p>
+    </div>
+	<script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+	<script type="text/javascript" src="simpleslider.js"></script>
+	<script type="text/javascript" src="touchwipe.js"></script>
+	<script type="text/javascript">
+	jQuery(document).ready(function() {
+		jQuery(".slider1").simpleSlider({
+			navigation: true,
+			prevText: "Previous",
+			nextText: "Next",
+			pagination: false,
+			autoplay: false,
+			delay: 8000,
+			speed: 500,
+			numItems: 1
+		});
+		
+		jQuery(".slider2").simpleSlider({
+			navigation: true,
+			prevText: "Previous",
+			nextText: "Next",
+			pagination: false,
+			autoplay: false,
+			delay: 8000,
+			speed: 500,
+			numItems: 3
+		});
+		
+		jQuery(".slider3").simpleSlider({
+			navigation: true,
+			prevText: "Previous",
+			nextText: "Next",
+			pagination: false,
+			autoplay: false,
+			delay: 8000,
+			speed: 500,
+			numItems: 1
+		});
+		
+		jQuery(".slider4").simpleSlider({
+			navigation: false,
+			prevText: "Previous",
+			nextText: "Next",
+			pagination: true,
+			autoplay: false,
+			delay: 8000,
+			speed: 500,
+			numItems: 1
+		});
+		
+		jQuery(".slider5").simpleSlider({
+			navigation: false,
+			prevText: "Previous",
+			nextText: "Next",
+			pagination: false,
+			autoplay: true,
+			delay: 8000,
+			speed: 500,
+			numItems: 1
+		});
+		
+		jQuery(".slider6").simpleSlider({
+			navigation: true,
+			prevText: "Previous",
+			nextText: "Next",
+			pagination: true,
+			autoplay: true,
+			delay: 8000,
+			speed: 500,
+			numItems: 3
+		});
+		
+		// This part allows touchwipe plugin for mobiles, it's optional
+		jQuery(".slider1>.slide, .slider2>.slide, .slider3>.slide, .slider4>.slide, .slider5>.slide, .slider6>.slide").each(function() {
+			var $this = $(this);
+			var precedent = $this.parent().parent().parent().find('.carousel-nav .precedent');
+			var suivant = $this.parent().parent().parent().find('.carousel-nav .suivant');
+			$(this).touchwipe({
+				wipeLeft: function() {suivant.trigger("click");},
+				wipeRight: function() {precedent.trigger("click");},
+				min_move_x: 10,
+				preventDefaultEvents: true
+			});
+		});
+		
+	});
+	</script>
+</body>
+</html>
